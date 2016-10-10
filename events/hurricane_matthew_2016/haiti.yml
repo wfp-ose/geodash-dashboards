@@ -79,7 +79,7 @@ overlays:
       bottom: 8px
       right: 8px
     text:
-      content: "&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>; WFP; Logistics Cluster"
+      content: "&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a>; WFP; Logistics Cluster"
       font:
         style: normal
         family: Verdana
