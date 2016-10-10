@@ -11,6 +11,7 @@ view:
   minZoom: 0
   zoom: 4
 controls:
+  attribution: false
   legend: true
   zoom: false
 renderlayers:
@@ -72,6 +73,28 @@ featurelayers:
       url: "http://geonode.wfp.org/cors/geoserver/wfs"
       geometry: shape
 overlays:
+  - id: attribution
+    type: text
+    position:
+      bottom: 8px
+      right: 8px
+    text:
+      content: "&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>; WFP; Logistics Cluster"
+      font:
+        style: normal
+        family: Verdana
+        size: 2rem
+    link:
+      url: "http://geodash.io"
+      target: "_blank"
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0, 0, 0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 20px }
+        - { name: color, value: white }
   - id: powered_by_geodash
     type: text
     position:
@@ -90,7 +113,7 @@ overlays:
       properties:
         - { name: padding, value: 8px }
         - { name: background, value: "rgba(0, 0, 0, 0.4)" }
-        - { name: border, value: "2px solid white" }
+        - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
         - { name: line-height, value: 20px }
         - { name: color, value: white }
@@ -160,6 +183,7 @@ overlays:
       content: ""
       font:
         family: FontAwesome
+        size: 2rem
     intent:
       name: zoomToLayer
       properties:
