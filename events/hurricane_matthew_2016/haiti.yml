@@ -12,7 +12,7 @@ view:
   zoom: 4
 controls:
   legend: true
-  zoom: true
+  zoom: false
 renderlayers:
   - wld_poi_facilities_wfp
   - wld_trs_obstacles_wfp
