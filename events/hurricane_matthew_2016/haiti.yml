@@ -124,7 +124,7 @@ overlays:
       content: ""
       font:
         family: FontAwesome
-        size: 2rem;
+        size: 2rem
     intent:
       name: zoomIn
     css:
@@ -137,11 +137,12 @@ overlays:
   - id: zoom_out
     type: text
     title: "Zoom Out"
-    position: {top: calc(8px + 2px + 8px + 2rem + 8px + 2px), left: 8px, bottom: auto, left: auto }
+    position: {top: calc(8px + 10px + 2rem + 10px), left: 8px, bottom: auto, left: auto }
     text:
       content: ""
       font:
         family: FontAwesome
+        size: 2rem
     intent:
       name: zoomOut
     css:
@@ -154,7 +155,7 @@ overlays:
   - id: reset_extent
     type: text
     title: "Reset Extent"
-    position: {top: 200px, left: 8px, bottom: auto, left: auto }
+    position: {top: calc(8px + 10px + 2rem + 10px + 8px + 10px + 2rem + 10px), left: 8px, bottom: auto, left: auto }
     text:
       content: ""
       font:
