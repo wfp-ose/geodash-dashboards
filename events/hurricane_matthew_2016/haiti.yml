@@ -4,8 +4,9 @@ view:
   baselayer: osm
   featurelayers:
     - wld_poi_facilities_wfp
-  latitude: 35.072
-  longitude: 38.641
+    - wld_trs_obstacles_wfp
+  latitude: 19.0673
+  longitude: -73.0811
   maxZoom: 18
   minZoom: 0
   zoom: 4
@@ -14,6 +15,7 @@ controls:
   zoom: true
 renderlayers:
   - wld_poi_facilities_wfp
+  - wld_trs_obstacles_wfp
   - osm
 baselayers:
   - id: osm
@@ -25,9 +27,9 @@ baselayers:
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       name: OpenStreetMap
       tile:
-        url: http://{a-d}.tile.openstreetmap.org/{z}/{x}/{y}.png
+        url: http://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png
       type: tiles
-      url: http://{a-d}.tile.openstreetmap.org/{z}/{x}/{y}.png
+      url: http://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png
 featurelayers:
   - id: wld_poi_facilities_wfp
     type: WMS
@@ -49,10 +51,26 @@ featurelayers:
       version: "1.0.0"  # Needs to 1.0.0 or returns bad results for some reason.
       url: "http://geonode.wfp.org/cors/geoserver/wfs"
       geometry: shape
-    kml:
-      url: "http://geonode.wfp.org/cors/geoserver/wms/kml"
-    gwc:
-      tiles: "http://geonode.wfp.org/geoserver/gwc/service/tms/1.0.0/{typename}@EPSG:900913@png/{z}/{x}/{y}.png"
+  - id: wld_trs_obstacles_wfp
+    type: WMS
+    title: "Global Obstacles"
+    description: "This layer contains information about obstacles in different countries where WFP operates."
+    source:
+      name: "WFP"
+      attribution: "WFP GeoNode"
+    wms:
+      version: "1.1.1"
+      layers: ["geonode:wld_trs_obstacles_wfp"]
+      styles: []
+      format: 'image/png'
+      transparent: true
+      buffer: 256
+      url: "http://geonode.wfp.org/cors/geoserver/wms"
+      cql_filter: "iso3 = 'HTI'"
+    wfs:
+      version: "1.0.0"  # Needs to 1.0.0 or returns bad results for some reason.
+      url: "http://geonode.wfp.org/cors/geoserver/wfs"
+      geometry: shape
 overlays:
   - id: powered_by_geodash
     type: text
@@ -101,7 +119,7 @@ overlays:
   - id: reset_extent
     type: text
     title: "Reset Extent"
-    position: {top: 8px, right: 140px, bottom: auto, left: auto }
+    position: {top: 200px, left: 8px, bottom: auto, left: auto }
     text:
       content: ""
       font:
