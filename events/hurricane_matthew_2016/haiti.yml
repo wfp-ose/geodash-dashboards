@@ -136,6 +136,40 @@ overlays:
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
         - { name: line-height, value: 20px }
+  - id: zoom_in
+    type: text
+    title: "Zoom In"
+    position: {top: 200px, left: 8px, bottom: auto, left: auto }
+    text:
+      content: ""
+      font:
+        family: FontAwesome
+    intent:
+      name: zoomIn
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 20px }
+  - id: zoom_out
+    type: text
+    title: "Zoom Out"
+    position: {top: 220px, left: 8px, bottom: auto, left: auto }
+    text:
+      content: ""
+      font:
+        family: FontAwesome
+    intent:
+      name: zoomOut
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 20px }
 legend:
   css:
     properties:
