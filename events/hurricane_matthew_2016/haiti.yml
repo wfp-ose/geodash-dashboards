@@ -1,0 +1,143 @@
+---
+title: Haiti Layers
+view:
+  baselayer: osm
+  featurelayers:
+    - wld_poi_facilities_wfp
+  latitude: 35.072
+  longitude: 38.641
+  maxZoom: 18
+  minZoom: 0
+  zoom: 4
+controls:
+  legend: true
+  zoom: true
+renderlayers:
+  - wld_poi_facilities_wfp
+  - osm
+baselayers:
+  - id: osm
+    title: OpenStreetMap
+    description: OpenStreetMap Basemap, Standard Style
+    legend:
+      label: OpenStreetMap
+    source:
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      name: OpenStreetMap
+      tile:
+        url: http://{a-d}.tile.openstreetmap.org/{z}/{x}/{y}.png
+      type: tiles
+      url: http://{a-d}.tile.openstreetmap.org/{z}/{x}/{y}.png
+featurelayers:
+  - id: wld_poi_facilities_wfp
+    type: WMS
+    title: "Global WFP Facilities"
+    description: "WFP Facilities worldwide, Country Office, Sub-Office, Field Office, Area Office, Humanitarian Response Depot."
+    source:
+      name: "WFP"
+      attribution: "WFP GeoNode"
+    wms:
+      version: "1.1.1"
+      layers: ["geonode:wld_poi_facilities_wfp"]
+      styles: []
+      format: 'image/png'
+      transparent: true
+      buffer: 256
+      url: "http://geonode.wfp.org/cors/geoserver/wms"
+      cql_filter: "iso3 = 'HTI'"
+    wfs:
+      version: "1.0.0"  # Needs to 1.0.0 or returns bad results for some reason.
+      url: "http://geonode.wfp.org/cors/geoserver/wfs"
+      geometry: shape
+    kml:
+      url: "http://geonode.wfp.org/cors/geoserver/wms/kml"
+    gwc:
+      tiles: "http://geonode.wfp.org/geoserver/gwc/service/tms/1.0.0/{typename}@EPSG:900913@png/{z}/{x}/{y}.png"
+overlays:
+  - id: powered_by_geodash
+    type: text
+    position:
+      bottom: 8px
+      left: 8px
+    text:
+      content: "Powered by GeoDash"
+      font:
+        style: normal
+        family: Verdana
+        size: 2rem
+    link:
+      url: "http://geodash.io"
+      target: "_blank"
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0, 0, 0, 0.4)" }
+        - { name: border, value: "2px solid white" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 20px }
+        - { name: color, value: white }
+  - id: dashboard_title
+    type: text
+    position:
+      top: 8px
+      right: 8px
+    text:
+      content: "Haiti Layers"
+      font:
+        style: normal
+        family: Verdana
+        size: 3rem
+    link:
+      url: "http://geodash.io"
+      target: "_blank"
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0, 0, 0, 0.4)" }
+        - { name: border, value: "2px solid white" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 20px }
+        - { name: color, value: white }
+  - id: reset_extent
+    type: text
+    title: "Reset Extent"
+    position: {top: 8px, right: 140px, bottom: auto, left: auto }
+    text:
+      content: ""
+      font:
+        family: FontAwesome
+    intent:
+      name: zoomToLayer
+      properties:
+        - name: layer
+          value: wld_poi_facilities_wfp
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 20px }
+legend:
+  css:
+    properties:
+    - name: padding
+      value: 8px
+    - name: background
+      value: '#EEE'
+    - name: border
+      value: '2px solid #0374e6'
+    - name: border-radius
+      value: 8px
+    - name: line-height
+      value: 20px
+    - name: color
+      value: black
+  height: auto
+  position:
+    bottom: 80px
+    left: auto
+    right: 8px
+    top: auto
+  title: Layer
+  width: 300px
