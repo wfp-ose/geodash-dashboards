@@ -146,18 +146,18 @@ overlays:
       bottom: 8px
       right: 8px
     text:
-      content: "&copy; [OpenStreetMap](http://www.openstreetmap.org/copyright); WFP; Logistics Cluster"
+      content: "&copy; [OpenStreetMap](http://www.openstreetmap.org/copyright); [WFP](http://www.wfp.org/); [Logistics Cluster](http://www.logcluster.org/)"
       font:
         style: normal
         family: Verdana
-        size: 2rem
+        size: 1.5rem
     css:
       properties:
         - { name: padding, value: 8px }
         - { name: background, value: "rgba(0, 0, 0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
-        - { name: line-height, value: 20px }
+        - { name: line-height, value: 1.5rem }
         - { name: color, value: white }
   - id: powered_by_geodash
     type: text
@@ -169,7 +169,7 @@ overlays:
       font:
         style: normal
         family: Verdana
-        size: 2rem
+        size: 1.5rem
     link:
       url: "http://geodash.io"
       target: "_blank"
@@ -179,7 +179,7 @@ overlays:
         - { name: background, value: "rgba(0, 0, 0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
-        - { name: line-height, value: 20px }
+        - { name: line-height, value: 1.5rem }
         - { name: color, value: white }
   - id: dashboard_title
     type: text
