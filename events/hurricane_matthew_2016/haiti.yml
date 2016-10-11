@@ -258,6 +258,15 @@ overlays:
         - { name: border-radius, value: 8px }
         - { name: line-height, value: 20px }
 legend:
+  title: Legend
+  position:
+    bottom: 80px
+    left: auto
+    right: 8px
+    top: auto
+  width: 360px
+  height: auto
+  grid: ["col-sm-4", "col-sm-8"]
   css:
     properties:
     - name: padding
@@ -272,11 +281,3 @@ legend:
       value: 20px
     - name: color
       value: black
-  height: auto
-  position:
-    bottom: 80px
-    left: auto
-    right: 8px
-    top: auto
-  title: Layer
-  width: 300px
