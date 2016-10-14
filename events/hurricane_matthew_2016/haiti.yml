@@ -203,53 +203,55 @@ overlays:
   - id: zoom_in
     type: text
     title: "Zoom In"
-    position: {top: 8px, left: 8px, bottom: auto, left: auto }
+    position: { top: 8px, left: 8px, bottom: auto, right: auto }
     text:
       content: ""
       font:
         family: FontAwesome
-        size: 2rem
+        size: 1.5rem
     intent:
       name: zoomIn
+    tooltip: { placement: right, content: "Zoom In" }
     css:
       properties:
         - { name: padding, value: 8px }
         - { name: background, value: "rgba(0,0,0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: "8px 8px 0px 0px" }
-        - { name: line-height, value: 2rem }
+        - { name: line-height, value: 1.5rem }
   - id: zoom_out
     type: text
     title: "Zoom Out"
-    position: {top: calc(8px + 10px + 2rem + 10px), left: 8px, bottom: auto, left: auto }
+    position: { top: calc(8px + 10px + 1.5rem + 10px), left: 8px, bottom: auto, right: auto }
     text:
       content: ""
       font:
         family: FontAwesome
-        size: 2rem
+        size: 1.5rem
     intent:
       name: zoomOut
+    tooltip: { placement: right, content: "Zoom Out" }
     css:
       properties:
         - { name: padding, value: 8px }
         - { name: background, value: "rgba(0,0,0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: "0px 0px 8px 8px" }
-        - { name: line-height, value: 20px }
+        - { name: line-height, value: 1.5rem }
   - id: reset_extent
     type: text
     title: "Reset Extent"
-    position: {top: calc(8px + 10px + 2rem + 10px + 8px + 10px + 2rem + 10px), left: 8px, bottom: auto, left: auto }
+    position: { top: calc(8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px), left: 8px, bottom: auto, right: auto }
     text:
-      content: ""
+      content: ""
       font:
         family: FontAwesome
-        size: 2rem
+        size: 1.5rem
     intent:
       name: zoomToLayer
       properties:
-        - name: layer
-          value: wld_poi_facilities_wfp
+        - { name: layer, value: wld_poi_facilities_wfp }
+    tooltip: { placement: right, content: "Reset Extent" }
     css:
       properties:
         - { name: padding, value: 8px }
@@ -257,6 +259,63 @@ overlays:
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
         - { name: line-height, value: 20px }
+  - id: toggle_fullscreen
+    type: text
+    title: "Toggle Full Screen"
+    position: { top: calc(8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px), left: 8px, bottom: auto, right: auto }
+    text:
+      content: ""
+      font:
+        family: FontAwesome
+        size: 1.5rem
+    intent: { name: toggleFullScreen }
+    tooltip: { placement: right, content: "Toggle Full Screen" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 1.5rem }
+  - id: print_map
+    type: text
+    title: "Print Map"
+    position: { top: calc(8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px), left: 8px, bottom: auto, right: auto }
+    text:
+      content: ""
+      font:
+        family: FontAwesome
+        size: 1.5rem
+    intent:
+      name: printMap
+    tooltip: { placement: right, content: "Print Map" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 1.5rem }
+  - id: submit_issue
+    type: text
+    title: "Submit Issue"
+    position: { top: calc(8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px), left: 8px, bottom: auto, right: auto }
+    text:
+      content: ""
+      font:
+        family: FontAwesome
+        size: 1.5rem
+    link:
+      url: "http://github.com/geodashio/geodash-viewer/issues"
+      target: "_blank"
+    tooltip: { placement: right, content: "Submit an Issue" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 1.5rem }
 legend:
   title: Legend
   position:
